@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f5a7957d-b34b-461e-af48-e21b0280ba6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Exemplos Simples/TeleCena/src/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exemplos Simples/TeleCena/src/teleCena/TeleCena.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exemplos Simples/exceptions/src/fileException/FileException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exemplos Simples/exceptions/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exemplos Simples/abstraction/abstraction.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exemplos Simples/composition/composition.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exemplos Simples/composition2/composition2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exemplos Simples/polimorfism/polimorfism.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exemplos Simples/upAndDowncasting/upAndDowncasting.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2eh2jgYIXaW5cgMikxfN9vVXkLi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Usuario/Desktop/GitHub/java_concepts",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5a7957d-b34b-461e-af48-e21b0280ba6a" name="Changes" comment="" />
+      <created>1712342626796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712342626796</updated>
+      <workItem from="1712342627433" duration="135000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
