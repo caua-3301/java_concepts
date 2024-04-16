@@ -14,10 +14,12 @@ public class Board {
         pieces = new Piece[rows][columns];
     }
 
+    //exist in board
     private boolean positionExist(int row, int col) {
         return row >=0 && row <= rows && col >= 0 && col <= columns;
     }
 
+    //exist in board with "Position"
     public boolean positionExist(Position position) {
         return  positionExist(position.getRow(), position.getColumn());
     }

@@ -22,8 +22,12 @@ public class ChessMeatch {
         }
         return mat;
     }
+
+    private void placeNewPiece(char column, int row, ChessPiece piece) {
+        board.placePiece(piece, new ChessPostion(column, row).toPosition());
+    }
     private void initialSetup() {
-        board.placePiece(new Rook(board, Color.BLACK), new Position(2, 1));
-        board.placePiece(new Rook(board, Color.BLACK), new Position(3, 1));
+        placeNewPiece('a', 1, new Rook(board, Color.WHITE));
+        placeNewPiece('b', 2, new Rook(board, Color.WHITE));
     }
 }
