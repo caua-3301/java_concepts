@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Exemplos Simples.iml" filepath="$PROJECT_DIR$/.idea/Exemplos Simples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Files/Files.iml" filepath="$PROJECT_DIR$/Files/Files.iml" />
+      <module fileurl="file://$PROJECT_DIR$/abstraction/abstraction.iml" filepath="$PROJECT_DIR$/abstraction/abstraction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/composition/composition.iml" filepath="$PROJECT_DIR$/composition/composition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/composition2/composition2.iml" filepath="$PROJECT_DIR$/composition2/composition2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exceptionExercise/exceptionExercise.iml" filepath="$PROJECT_DIR$/exceptionExercise/exceptionExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exceptionHandling/exceptionHandling.iml" filepath="$PROJECT_DIR$/exceptionHandling/exceptionHandling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exceptions/exceptions.iml" filepath="$PROJECT_DIR$/exceptions/exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interface/interface.iml" filepath="$PROJECT_DIR$/interface/interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/polimorfism/polimorfism.iml" filepath="$PROJECT_DIR$/polimorfism/polimorfism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upAndDowncasting/upAndDowncasting.iml" filepath="$PROJECT_DIR$/upAndDowncasting/upAndDowncasting.iml" />
+    </modules>
+  </component>
+</project>
