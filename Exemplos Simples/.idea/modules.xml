@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/exceptionExercise/exceptionExercise.iml" filepath="$PROJECT_DIR$/exceptionExercise/exceptionExercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/exceptionHandling/exceptionHandling.iml" filepath="$PROJECT_DIR$/exceptionHandling/exceptionHandling.iml" />
       <module fileurl="file://$PROJECT_DIR$/exceptions/exceptions.iml" filepath="$PROJECT_DIR$/exceptions/exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/factory/factory.iml" filepath="$PROJECT_DIR$/factory/factory.iml" />
       <module fileurl="file://$PROJECT_DIR$/interface/interface.iml" filepath="$PROJECT_DIR$/interface/interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/polimorfism/polimorfism.iml" filepath="$PROJECT_DIR$/polimorfism/polimorfism.iml" />
       <module fileurl="file://$PROJECT_DIR$/upAndDowncasting/upAndDowncasting.iml" filepath="$PROJECT_DIR$/upAndDowncasting/upAndDowncasting.iml" />
