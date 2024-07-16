@@ -1,0 +1,9 @@
+Maria da Silva,32
+Jose Pinho,23
+João Matos,42
+Cauã Pires,12
+Lionel Messi,85
+Scalone Lionel,32
+Classe Abstrata,10
+JDBC,8
+Swing,4
