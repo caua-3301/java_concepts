@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/exceptionHandling/exceptionHandling.iml" filepath="$PROJECT_DIR$/exceptionHandling/exceptionHandling.iml" />
       <module fileurl="file://$PROJECT_DIR$/exceptions/exceptions.iml" filepath="$PROJECT_DIR$/exceptions/exceptions.iml" />
       <module fileurl="file://$PROJECT_DIR$/factory/factory.iml" filepath="$PROJECT_DIR$/factory/factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/genericsEx/genericsEx.iml" filepath="$PROJECT_DIR$/genericsEx/genericsEx.iml" />
       <module fileurl="file://$PROJECT_DIR$/herancas_multiplas/herancas_multiplas.iml" filepath="$PROJECT_DIR$/herancas_multiplas/herancas_multiplas.iml" />
       <module fileurl="file://$PROJECT_DIR$/interface/interface.iml" filepath="$PROJECT_DIR$/interface/interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/interfaceComparable/interfaceComparable.iml" filepath="$PROJECT_DIR$/interfaceComparable/interfaceComparable.iml" />
