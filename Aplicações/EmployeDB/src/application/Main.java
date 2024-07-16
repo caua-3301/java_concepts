@@ -5,13 +5,21 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         try {
-            ProcessBuilder addBuilder = new ProcessBuilder("git", "add", ".");
-            addBuilder.redirectErrorStream(true);
-            Process addProcess = addBuilder.start();
+            // Executa o comando git add .
+            Process addProcess = Runtime.getRuntime().exec("git add .");
             addProcess.waitFor();
-        }
-        catch (InterruptedException | IOException error) {
-            System.out.println("Error to exec \"git add .\" " + error.getMessage());
+
+            // Executa o comando git commit -m "save"
+            Process commitProcess = Runtime.getRuntime().exec("git commit -m \"save\"");
+            commitProcess.waitFor();
+
+            // Executa o comando git push
+            Process pushProcess = Runtime.getRuntime().exec("git push");
+            pushProcess.waitFor();
+
+            System.out.println("Comandos Git executados com sucesso!");
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
