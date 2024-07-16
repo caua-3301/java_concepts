@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/abstraction/abstraction.iml" filepath="$PROJECT_DIR$/abstraction/abstraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/composition/composition.iml" filepath="$PROJECT_DIR$/composition/composition.iml" />
       <module fileurl="file://$PROJECT_DIR$/composition2/composition2.iml" filepath="$PROJECT_DIR$/composition2/composition2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/defaultMet/defaultMet.iml" filepath="$PROJECT_DIR$/defaultMet/defaultMet.iml" />
       <module fileurl="file://$PROJECT_DIR$/exceptionExercise/exceptionExercise.iml" filepath="$PROJECT_DIR$/exceptionExercise/exceptionExercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/exceptionHandling/exceptionHandling.iml" filepath="$PROJECT_DIR$/exceptionHandling/exceptionHandling.iml" />
       <module fileurl="file://$PROJECT_DIR$/exceptions/exceptions.iml" filepath="$PROJECT_DIR$/exceptions/exceptions.iml" />
