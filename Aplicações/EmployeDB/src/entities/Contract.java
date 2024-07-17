@@ -3,28 +3,36 @@ package entities;
 import util.GenerateId;
 
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public abstract class Contract {
     private final String id;
-    private Date contract_date;
+    private LocalDate contract_date;
     private double wage;
 
-    public Contract(int id, Date contract_date, double wage) throws NoSuchAlgorithmException {
-        this.id = GenerateId.generateId(contract_date.toString());
+    public Contract(String hash_for_id, LocalDate contract_date, double wage) throws NoSuchAlgorithmException {
+        this.id = GenerateId.generateId(hash_for_id);
         this.contract_date = contract_date;
         this.wage = wage;
+    }
+
+    public Contract() {
+        this.id = "id_not_valid";
+        this.contract_date = LocalDate.now();
+        this.wage = 0.00;
     }
 
     public String getId() {
         return id;
     }
 
-    public Date getContract_date() {
+    public LocalDate getContract_date() {
         return contract_date;
     }
 
-    public void setContract_date(Date contract_date) {
+    public void setContract_date(LocalDate contract_date) {
         this.contract_date = contract_date;
     }
 

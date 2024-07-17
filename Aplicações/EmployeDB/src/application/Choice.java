@@ -13,7 +13,7 @@ public class Choice {
         String out = String.format("INFORME A OPÇÃO DESEJADA: %n" +
                 "1 - Adicionar funcionário; %n" +
                 "2 - Listar funcionários; %n" +
-                "3 - Encerrar");
+                "3 - Encerrar %n");
 
         System.out.println(out);
 

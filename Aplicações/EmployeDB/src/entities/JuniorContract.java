@@ -1,12 +1,12 @@
 package entities;
 
 import java.security.NoSuchAlgorithmException;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class JuniorContract extends Contract implements WageCalculator{
 
-    public JuniorContract(int id, Date contract_date, double wage) throws NoSuchAlgorithmException {
-        super(id, contract_date, wage);
+    public JuniorContract(String hash_for_id, LocalDate contract_date, double wage) throws NoSuchAlgorithmException {
+        super(hash_for_id, contract_date, wage);
     }
 
     @Override
