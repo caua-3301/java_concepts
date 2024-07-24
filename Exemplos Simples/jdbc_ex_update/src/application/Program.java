@@ -1,6 +1,7 @@
 package application;
 
 import db.DB;
+import db.DbIntegrityException;
 
 import java.sql.*;
 import java.text.ParseException;
@@ -9,27 +10,23 @@ import java.text.SimpleDateFormat;
 public class Program {
     public static void main(String[] args){
         Connection connect = null;
-        PreparedStatement prep_state = null;
+        PreparedStatement preparet_statement = null;
 
         try {
             connect = DB.getConnection();
-            prep_state = connect.prepareStatement(
-                    "update seller "
-                        +"set BaseSalary = BaseSalary+?"
-                        +"where Id = ?");
+            preparet_statement = connect.prepareStatement(
+                    "delete from seller where Id = ?");
 
-            prep_state.setDouble(1,1000);
-            prep_state.setInt(2, 7);
+            preparet_statement.setInt(1, 8);
 
-            int affected = prep_state.executeUpdate();
+            int rows_removed = preparet_statement.executeUpdate();
 
-            System.out.println(affected + "rows affected");
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println(rows_removed + " are removed");
+        } catch (SQLException err) {
+            throw new DbIntegrityException(err.getMessage());
         }
         finally {
-            DB.closeStatement(prep_state);
+            DB.closeStatement(preparet_statement);
             DB.closeConnection();
         }
     }

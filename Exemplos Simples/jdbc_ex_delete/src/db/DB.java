@@ -1,5 +1,6 @@
 package db;
 
+import javax.swing.plaf.nimbus.State;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
@@ -13,7 +14,7 @@ public class DB {
             try {
                 st.close();
             } catch (SQLException err) {
-                throw new DbIntegrityException(err.getMessage());
+                throw new DbException(err.getMessage());
             }
         }
     }
@@ -23,7 +24,7 @@ public class DB {
             try {
                 res.close();
             } catch (SQLException err) {
-                throw new DbIntegrityException(err.getMessage());
+                throw new DbException(err.getMessage());
             }
         }
     }
@@ -36,7 +37,7 @@ public class DB {
             String url = props.getProperty("dburl");
             connect = DriverManager.getConnection(url, props);
             } catch (SQLException err) {
-                throw new DbIntegrityException(err.getMessage());
+                throw new DbException(err.getMessage());
             }
         }
         return connect;
@@ -48,7 +49,7 @@ public class DB {
             try {
                 connect.close();
             } catch (SQLException err) {
-                throw new DbIntegrityException(err.getMessage());
+                throw new DbException(err.getMessage());
             }
         }
     }
@@ -60,7 +61,7 @@ public class DB {
             props.load(fs);
             return props;
         } catch (IOException err) {
-            throw new DbIntegrityException(err.getMessage());
+            throw new DbException(err.getMessage());
         }
     }
 }
