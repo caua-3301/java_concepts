@@ -7,6 +7,8 @@ import model.entities.Department;
 import model.entities.Seller;
 
 import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,17 +24,84 @@ public class SellerDaoJDBC implements SellerDao {
     }
     @Override
     public void insert(Seller seller) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        ResultSet resultSet = null;
 
+        PreparedStatement preparedStatement = null;
+         try {
+             preparedStatement = connection.prepareStatement(
+                     "insert into seller "
+                        + "(Name, Email, BirthDate, BaseSalary, DepartmentId) "
+                        + "values (?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+
+             preparedStatement.setString(1, seller.getName());
+             preparedStatement.setString(2,seller.getEmail());
+             preparedStatement.setDate(3, new Date(sdf.parse("09/10/2000").getTime()));
+             preparedStatement.setDouble(4, seller.getBaseSalary());
+             preparedStatement.setInt(5, seller.getDepartment().getId());
+
+             int rows_added = preparedStatement.executeUpdate();
+
+             if (rows_added > 0) {
+                 resultSet = preparedStatement.getGeneratedKeys();
+
+                 while (resultSet.next()) {
+                     int id_adde = resultSet.getInt(1);
+                     System.out.println("Id added " + id_adde);
+                 }
+             }
+             else {
+                 System.out.println("No rows affected");
+             }
+
+         } catch (SQLException | ParseException error) {
+             throw new DbGenericError(error.getMessage());
+         }
+         finally {
+             DataBaseControl.closeStatement(preparedStatement);
+             DataBaseControl.closeResultSet(resultSet);
+         }
     }
 
     @Override
-    public void update(Seller seller) {
+    public void update(Seller seller, int id) {
+            PreparedStatement preparedStatement = null;
 
+            try {
+                preparedStatement = connection.prepareStatement(
+                        "update seller set "
+                            +"Name = ?, Email = ?, BirthDate = ?, BaseSalary = ?, DepartmentId = ? "
+                            +"where Id = ?");
+
+                insertValuesOfSeller(preparedStatement, seller, id);
+
+                int rows = preparedStatement.executeUpdate();
+                System.out.println("Rows affected = " + rows);
+            } catch (SQLException error) {
+                throw new DbGenericError(error.getMessage());
+            }
+            finally {
+                DataBaseControl.closeStatement(preparedStatement);
+            }
     }
 
     @Override
     public void deleteById(Integer id) {
+        PreparedStatement preparedStatement = null;
+         try {
+             preparedStatement = connection.prepareStatement(
+                     "delete from seller where Id = ?");
 
+             preparedStatement.setInt(1, id);
+             int rows_delleted = preparedStatement.executeUpdate();
+
+             System.out.println("rows deleted");
+         } catch (SQLException error) {
+             throw new DbGenericError(error.getMessage());
+         }
+         finally {
+             DataBaseControl.closeStatement(preparedStatement);
+         }
     }
 
     @Override
@@ -149,5 +218,14 @@ public class SellerDaoJDBC implements SellerDao {
                 resultSet.getDate("BirthDate"),
                 resultSet.getDouble("BaseSalary"),
                 department);
+    }
+
+    private static void insertValuesOfSeller(PreparedStatement preparedStatement, Seller seller, int id) throws SQLException {
+        preparedStatement.setString(1, seller.getName());
+        preparedStatement.setString(2, seller.getEmail());
+        preparedStatement.setDate(3, new Date(seller.getBirthDate().getTime()));
+        preparedStatement.setDouble(4, seller.getBaseSalary());
+        preparedStatement.setInt(5, seller.getDepartment().getId());
+        preparedStatement.setInt(6, id);
     }
 }
